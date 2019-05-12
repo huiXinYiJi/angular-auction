@@ -1,3 +1,5 @@
 <p>
-  <span class="glyphicon glyphicon-star"></span>
-</p> 
+  <!-- <span class="oi oi-star"></span> -->
+  <fa-icon *ngFor="let star of stars" [icon]="star ? faStar : faSolidStar"></fa-icon>
+  <span> {{rating}}星</span>
+</p>
