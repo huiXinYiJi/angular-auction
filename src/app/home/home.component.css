@@ -1,0 +1,14 @@
+.home {
+  background-color: gray;
+  height: 100px;
+  width: 70%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  margin-bottom: 40px;
+}
+.app-carousel {
+  width: 100%;
+}
