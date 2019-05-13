@@ -9,13 +9,21 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { StarsComponent } from './stars/stars.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { Code404Component } from './code404/code404.component';
 import { ProductDescComponent } from './product-desc/product-desc.component';
 import { SalerInfoComponent } from './saler-info/saler-info.component';
 import { ChatComponent } from './chat/chat.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+
+import { RouterModule, Routes } from '@angular/router';
+
+const routeConfig: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'product/:prodTitle', component: ProductDetailComponent },
+  { path: '**', component: Code404Component },
+];
 
 @NgModule({
   declarations: [
@@ -31,12 +39,12 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductDescComponent,
     SalerInfoComponent,
     ChatComponent,
-    ProductDetailComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    AppRoutingModule,
+    RouterModule.forRoot(routeConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
