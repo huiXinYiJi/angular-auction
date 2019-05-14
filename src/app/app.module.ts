@@ -18,6 +18,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 
 import { RouterModule, Routes } from '@angular/router';
 
+import { ProductService } from './shared/product.service';
+
 const routeConfig: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -46,7 +48,7 @@ const routeConfig: Routes = [
     FontAwesomeModule,
     RouterModule.forRoot(routeConfig)
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,7 +8,7 @@ export class ProductService {
   constructor() { }
 
   getProduct(): Product {
-    return new Product(1, "第一个商品", 1.99, 3.5, "这是第一个商品，是我在学习慕课网Angular入门实战时创建的", ["电子产品","硬件设备"]);
+    return new Product(1, "第一个商品", 1.99, 3.5, "这是第一个商品，是我在学习慕课网Angular入门实战时创建的", ["电子产品","硬件设备"])
   }
 }
 
